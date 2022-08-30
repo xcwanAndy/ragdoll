@@ -70,7 +70,8 @@ else()
 endif()
 
 # NVML
-list(APPEND GCCL_EXTERNAL_LIB /usr/local/cuda/lib64/stubs/libnvidia-ml.so)
+list(APPEND RAGDOLL_EXTERNAL_LIB /usr/local/cuda/lib64/stubs/libnvidia-ml.so)
+list(APPEND RAGDOLL_EXTERNAL_LIB /usr/local/cuda/lib64/stubs/libnvidia-ml.so.1)
 
 
 add_subdirectory(third_party/pybind11)
