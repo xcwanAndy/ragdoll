@@ -69,6 +69,9 @@ else()
   message(FATAL_ERROR "GCCL_HOME is not defined in environment")
 endif()
 
+# NVML
+list(APPEND GCCL_EXTERNAL_LIB /usr/local/cuda/lib64/stubs/libnvidia-ml.so)
+
 
 add_subdirectory(third_party/pybind11)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ragdoll ${RAGDOLL_EXTERNAL_INCLUDES})
